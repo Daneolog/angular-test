@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { TextButtonComponent } from './textbutton/textbutton.component'
 
 @NgModule({
   imports: [
@@ -11,7 +12,8 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   declarations: [
-    AppComponent
+    AppComponent,
+    TextButtonComponent
   ]
 })
 export class AppModule {}
