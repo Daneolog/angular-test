@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { TextButtonComponent } from './textbutton/textbutton.component'
+import { MyListComponent } from './mylist/mylist.component'
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import { TextButtonComponent } from './textbutton/textbutton.component'
   ],
   declarations: [
     AppComponent,
-    TextButtonComponent
+    TextButtonComponent,
+    MyListComponent
   ]
 })
 export class AppModule {}

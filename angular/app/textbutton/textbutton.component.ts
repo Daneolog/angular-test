@@ -9,11 +9,6 @@ import { Component, Input } from '@angular/core';
   `
 })
 export class TextButtonComponent {
-  mytext: string;
   @Input() text: string;
   @Input() buttonText: string;
-
-  constructor() {
-    this.mytext = "hi";
-  }
 }
