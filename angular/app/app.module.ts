@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { TextButtonComponent } from './textbutton/textbutton.component'
 import { MyListComponent } from './mylist/mylist.component'
+import { CheckTextComponent } from './checktext/checktext.component'
 
 @NgModule({
   imports: [
-    BrowserModule
+    BrowserModule,
+    CommonModule
   ],
   bootstrap: [
     AppComponent
@@ -15,7 +18,8 @@ import { MyListComponent } from './mylist/mylist.component'
   declarations: [
     AppComponent,
     TextButtonComponent,
-    MyListComponent
+    MyListComponent,
+    CheckTextComponent
   ]
 })
 export class AppModule {}

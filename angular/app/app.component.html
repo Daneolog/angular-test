@@ -1,10 +1,16 @@
 <div class="app" id="something">
+    <img [src]="src" style="height: 500px">
+    <br>
+
     <a [href]="url">this is a link</a>
     <br>
 
     <mylist [data]="data">this is a list</mylist>
     
     this is a 
-    <textbutton text="text" buttonText="button" (clicked)="click()"></textbutton>
-    <p>{{counter}}</p>
+    <textbutton text="text" buttonText="button" (clicked)="click($event)"></textbutton>
+    <p [hidden]="!checked">{{thingy | date: 'MM/dd/yyyy hh:mm:ss'}}</p>
+    <br [hidden]="checked">
+
+    <checktext (clicked)="check($event)">this is a checktext</checktext>
 </div>
