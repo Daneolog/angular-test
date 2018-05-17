@@ -2,10 +2,9 @@
     <a [href]="url">this is a link</a>
     <br>
 
+    <mylist [data]="data">this is a list</mylist>
+    
     this is a 
-    <textbutton [text]="'text'" [buttonText]="'button'"></textbutton>
-    <br>
-
-    <p>this is a list</p>
-    <mylist [data]="data"></mylist>
+    <textbutton text="text" buttonText="button" (clicked)="click()"></textbutton>
+    <p>{{counter}}</p>
 </div>

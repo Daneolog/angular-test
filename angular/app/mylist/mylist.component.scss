@@ -1,5 +1,15 @@
-li {
+table {
     margin: auto;
-    border: 1px solid black;
-    width: 10%;
+    width: auto;
+    border-collapse: collapse;
+}
+
+th {
+    font-weight: bold;
+}
+
+tr {
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: black;
 }

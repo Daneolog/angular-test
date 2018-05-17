@@ -1,22 +1,16 @@
 import { Component, Input } from '@angular/core';
 
-export class Data {
-  text: string;
-  target: string;
-
-  constructor(text: string, target: string) {
-    this.text = text;
-    this.target = target;
-  }
-}
-
 @Component({
   selector: 'mylist',
   styleUrls: ['mylist.component.scss'],
   template: `
-    <ul>
-      <li *ngFor="let item of data;"><a [href]=item.target>{{ item.text | uppercase }}</a></li>
-    </ul>
+    <table>
+      <tr><th colspan=2><ng-content></ng-content></th></tr>
+      <tr *ngFor="let item of data">
+        <td><a [href]="item.target">{{ item.text | uppercase }}</a></td>
+        <td>{{ item.target }}</td>
+      </tr>
+    </table>
   `
 })
 export class MyListComponent {
