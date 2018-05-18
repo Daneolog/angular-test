@@ -1,12 +1,11 @@
-<div [ngStyle]="style">
-    <div class="app" id="something">
-        <a [href]="url">this is a link</a>
-        
-        <!-- dotted line -->
-        <div style="border-bottom: 1px dotted black; margin: 10px"></div>
+<div class="app" id="something">
+    <img [src]="src" style="height: 500px">
+    <br>
 
-        <mylist [data]="data">this is a list</mylist>
+    <a [href]="url">this is a link</a>
+    <br>
 
+<<<<<<< HEAD
         <!-- dotted line -->
         <div style="border-bottom: 1px dotted black; margin: 10px"></div>
 
@@ -20,10 +19,14 @@
         <textbutton text="text" buttonText="button" (clicked)="click($event)"></textbutton>
         <p [hidden]="!checked">{{thingy | date: 'MM/dd/yyyy hh:mm:ss'}}</p>
         <br [hidden]="checked">
+=======
+    <mylist [data]="data">this is a list</mylist>
+    
+    this is a 
+    <textbutton text="text" buttonText="button" (clicked)="click($event)"></textbutton>
+    <p [hidden]="!checked">{{thingy | date: 'MM/dd/yyyy hh:mm:ss'}}</p>
+    <br [hidden]="checked">
+>>>>>>> parent of ea1782e... backgrounds
 
-        <!-- dotted line -->
-        <div style="border-bottom: 1px dotted black; margin: 10px"></div>
-
-        <checktext (clicked)="check($event)">this is a checktext</checktext>
-    </div>
+    <checktext (clicked)="check($event)">this is a checktext</checktext>
 </div>
