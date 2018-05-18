@@ -11,6 +11,9 @@ export class AppComponent {
   item: number
   url: string
   data: Data[];
+  // pic: string = 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png';
+  pic: string = 'app/img/Oaki.JPG';
+  size: number = 1000;
 
   constructor() {
     this.item = 3
