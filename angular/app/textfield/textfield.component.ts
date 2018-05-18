@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
+import { EventEmitter } from '@angular/common/src/facade/async';
 
 @Component({
     selector: 'textfield',
@@ -9,4 +10,6 @@ import { Component, Input } from '@angular/core';
     @Input() text: string;
     @Input() fname: string;
     @Input() lname: string;
+    @Input() ftext: string;
+    @Input() ltext: string;
   }

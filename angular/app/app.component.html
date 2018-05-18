@@ -1,16 +1,15 @@
-<div class="app" id="something">
-    <img [src]="src" style="height: 500px">
-    <br>
+<div [ngStyle]="style2">
+    <div class="app" id="something">
+        <a [href]="url">this is a link</a>
 
-    <a [href]="url">this is a link</a>
-    <br>
-
-<<<<<<< HEAD
         <!-- dotted line -->
         <div style="border-bottom: 1px dotted black; margin: 10px"></div>
 
-        <img [src]="pic" [width] = "size">
+        <img [src]="pic1" [width] = "size"><br>
         <textfield text = "Name" [fname] = "fname" [lname] = "lname"> </textfield>
+
+        <!-- dotted line -->
+        <div style="border-bottom: 1px dotted black; margin: 10px"></div>
 
         <!-- dotted line -->
         <div style="border-bottom: 1px dotted black; margin: 10px"></div>
@@ -19,14 +18,19 @@
         <textbutton text="text" buttonText="button" (clicked)="click($event)"></textbutton>
         <p [hidden]="!checked">{{thingy | date: 'MM/dd/yyyy hh:mm:ss'}}</p>
         <br [hidden]="checked">
-=======
-    <mylist [data]="data">this is a list</mylist>
-    
-    this is a 
-    <textbutton text="text" buttonText="button" (clicked)="click($event)"></textbutton>
-    <p [hidden]="!checked">{{thingy | date: 'MM/dd/yyyy hh:mm:ss'}}</p>
-    <br [hidden]="checked">
->>>>>>> parent of ea1782e... backgrounds
 
-    <checktext (clicked)="check($event)">this is a checktext</checktext>
+        <checktext (clicked)="check($event)">this is a checktext</checktext>
+
+        <!-- dotted line -->
+        <div style="border-bottom: 1px dotted black; margin: 10px"></div>
+
+        <!-- <textfield text="attribute" fname="text" lname="url" [(ftext)]="ftext" [(ltext)]="ltext"></textfield> -->
+        title: <input type="text" placeholder="title" [(ngModel)]="title"><br>
+        url: <input type="text" placeholder="url" [(ngModel)]="url"><br>
+
+        <button (click)="onClick()">BUTTON</button>
+        <input type="button" value="BUTTON" (click)="onClick()">
+
+        <mylist [data]="data">this is a list</mylist>
+    </div>
 </div>
