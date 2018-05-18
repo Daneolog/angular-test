@@ -1,1 +1,15 @@
-{}
+{
+    "data" : [{
+        "text" : "numero uno",
+        "target" : "https://www.google.com/"
+    }, {
+        "text" : "numero due",
+        "target" : "https://www.yahoo.com/"
+    }, {
+        "text" : "numero tre",
+        "target" : "https://duckduckgo.com/"
+    }, {
+        "text" : "numero quattro",
+        "target" : "https://bing.com/"
+    }]
+}

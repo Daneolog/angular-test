@@ -5,11 +5,8 @@
         <!-- dotted line -->
         <div style="border-bottom: 1px dotted black; margin: 10px"></div>
 
-        <img [src]="pic1" [width] = "size"><br>
+        <img [src]="pic1" [width] = "size" [ngStyle]="{'filter' : 'brightness(' + percent + '%)'}"><br>
         <textfield text = "Name" [fname] = "fname" [lname] = "lname"> </textfield>
-
-        <!-- dotted line -->
-        <div style="border-bottom: 1px dotted black; margin: 10px"></div>
 
         <!-- dotted line -->
         <div style="border-bottom: 1px dotted black; margin: 10px"></div>
@@ -24,13 +21,20 @@
         <!-- dotted line -->
         <div style="border-bottom: 1px dotted black; margin: 10px"></div>
 
-        <!-- <textfield text="attribute" fname="text" lname="url" [(ftext)]="ftext" [(ltext)]="ltext"></textfield> -->
-        title: <input type="text" placeholder="title" [(ngModel)]="title"><br>
-        url: <input type="text" placeholder="url" [(ngModel)]="url"><br>
+        <p>{{title}} and {{url}}</p>
+        <!-- <textfield text="attribute" fname="text" lname="url" [(ftext)]="title" [(ltext)]="url"></textfield> -->
+        title: <input type="text" placeholder="numero uno" [(ngModel)]="title"><br>
+        url: <input type="text" placeholder="http://google.com" [(ngModel)]="url"><br>
 
         <button (click)="onClick()">BUTTON</button>
         <input type="button" value="BUTTON" (click)="onClick()">
 
         <mylist [data]="data">this is a list</mylist>
+
+        <!-- dotted line -->
+        <div style="border-bottom: 1px dotted black; margin: 10px"></div>
+
+        <input type="range" min="0" max="100" [(ngModel)]="percent">
+        <p>{{percent}}</p>
     </div>
 </div>
