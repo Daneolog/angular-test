@@ -1,16 +1,23 @@
-<div class="app" id="something">
-    <img [src]="src" style="height: 500px">
-    <br>
+<div [ngStyle]="style">
+    <div class="app" id="something">
+        <a [href]="url">this is a link</a>
+        
+        <!-- dotted line -->
+        <div style="border-bottom: 1px dotted black; margin: 10px"></div>
 
-    <a [href]="url">this is a link</a>
-    <br>
+        <mylist [data]="data">this is a list</mylist>
 
-    <mylist [data]="data">this is a list</mylist>
-    
-    this is a 
-    <textbutton text="text" buttonText="button" (clicked)="click($event)"></textbutton>
-    <p [hidden]="!checked">{{thingy | date: 'MM/dd/yyyy hh:mm:ss'}}</p>
-    <br [hidden]="checked">
+        <!-- dotted line -->
+        <div style="border-bottom: 1px dotted black; margin: 10px"></div>
+        
+        this is a 
+        <textbutton text="text" buttonText="button" (clicked)="click($event)"></textbutton>
+        <p [hidden]="!checked">{{thingy | date: 'MM/dd/yyyy hh:mm:ss'}}</p>
+        <br [hidden]="checked">
 
-    <checktext (clicked)="check($event)">this is a checktext</checktext>
+        <!-- dotted line -->
+        <div style="border-bottom: 1px dotted black; margin: 10px"></div>
+
+        <checktext (clicked)="check($event)">this is a checktext</checktext>
+    </div>
 </div>
