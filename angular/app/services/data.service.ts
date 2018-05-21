@@ -4,15 +4,16 @@ import { Http } from "@angular/http";
 import { Observable } from 'rxjs/Observable'
 import 'rxjs/add/operator/map'
 
-const DB_URL: string = 'db.json'
+const DB_URL: string = 'api/data'
 
 export class Data {
-    text: string;
-    target: string;
+    id: number;
+    name: string;
+    url: string;
   
-    constructor(text: string, target: string) {
-        this.text = text;
-        this.target = target;
+    constructor(id: number, name: string, url: string) {
+        this.name = name;
+        this.url = url;
     }
 }
 
@@ -33,9 +34,15 @@ export class DataService {
             .map(response => response.json());        
     }
 
-    addData() {
-        // return this.http
-        //     .put(`${DB_URL}/, )
-        //     .map
+    setData(id, title, url): Observable<any[]> {
+        return this.http
+            .put(`${DB_URL}/${id}`, new Data(id, title, url))
+            .map(response => response.json());        
     }
+
+    // addData(id, title, url) {
+    //     return this.http
+    //         .put(`${DB_URL}/${id}`, new Data(id, title, url))
+    //         .map(response => response.json());
+    // }
 }

@@ -12,11 +12,12 @@
         <div style="border-bottom: 1px dotted black; margin: 10px"></div>
         
         this is a 
-        <textbutton text="text" buttonText="button" (clicked)="click($event)"></textbutton>
+        <textbutton text="text" buttonText="button" (clicked)="click1()"></textbutton>
         <p [hidden]="!checked">{{thingy | date: 'MM/dd/yyyy hh:mm:ss'}}</p>
         <br [hidden]="checked">
 
         <checktext (clicked)="check($event)">this is a checktext</checktext>
+        <p>{{item}}</p>
 
         <!-- dotted line -->
         <div style="border-bottom: 1px dotted black; margin: 10px"></div>
@@ -26,10 +27,10 @@
         title: <input type="text" placeholder="numero uno" [(ngModel)]="title"><br>
         url: <input type="text" placeholder="http://google.com" [(ngModel)]="url"><br>
 
-        <button (click)="onClick()">BUTTON</button>
-        <input type="button" value="BUTTON" (click)="onClick()">
+        <button type="submit" (click)="submit()">submit</button>
+        <input type="button" value="submit" (click)="submit()">
 
-        <mylist [data]="data">this is a list</mylist>
+        <mylist [data]="data" (clicked)="click2($event)">this is a list</mylist>
 
         <!-- dotted line -->
         <div style="border-bottom: 1px dotted black; margin: 10px"></div>

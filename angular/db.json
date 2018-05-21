@@ -1,15 +1,24 @@
-[
+{
+  "data": [
     {
-        "text" : "numero uno",
-        "target" : "https://www.google.com/"
-    }, {
-        "text" : "numero due",
-        "target" : "https://www.yahoo.com/"
-    }, {
-        "text" : "numero tre",
-        "target" : "https://duckduckgo.com/"
-    }, {
-        "text" : "numeroquattro",
-        "target" : "https://bing.com/"
+      "name": "numero uno",
+      "url": "https://www.google.com/",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "numero due",
+      "url": "https://www.yahoo.com/"
+    },
+    {
+      "id": "3",
+      "name": "numero tre",
+      "url": "https://duckduckgo.com/"
+    },
+    {
+      "id": "4",
+      "name": "numero quattro",
+      "url": "https://www.bing.com/"
     }
-]
+  ]
+}

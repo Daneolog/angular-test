@@ -1,17 +1,7 @@
 import { Component } from '@angular/core';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
-import { DataService } from './services/data.service';
-
-export class Data {
-    text: string;
-    target: string;
-
-    constructor(text: string, target: string) {
-        this.text = text;
-        this.target = target;
-    }
-}
+import { Data, DataService } from './services/data.service';
 
 @Component({
     selector: 'app-root',
@@ -19,8 +9,7 @@ export class Data {
     templateUrl: 'app.component.html'
 })
 export class AppComponent {
-    item: number = 3;
-    data: any[] = [{text: "stuff", target: "other stuff"}];
+    data: any[] = [];
 
     thingy: Date = new Date();
     style1: any;
@@ -34,6 +23,8 @@ export class AppComponent {
     checked: boolean;
     title: string = '';
     url: string = '';
+    id: number = 5;
+    item: number = 0;
 
     constructor(private dataService: DataService) {
         // this.data = [{text: 'numero uno', target: 'http://google.com'},
@@ -51,14 +42,29 @@ export class AppComponent {
             'height': '100%'
         };
     }
-
-    click(event: any) {
-        this.thingy = event;
+    
+    click1() {
+        this.thingy = new Date();
+        this.item++;
     }
 
-    onClick(event: any) {
-        if (this.title != '' && this.url != '')
-            this.data.push(new Data(this.title, this.url ));
+    click2(index: any) {
+        console.log(index);
+
+        if (this.title != '' && this.url != '') {
+            this.dataService
+                .setData(index, this.title, this.url)
+                .subscribe(data => console.log(data));
+            this.dataService.getData().subscribe(data => this.data = data);
+        }
+    }
+    
+    submit(event: any) {
+        if (this.title != '' && this.url != '') {
+            this.data.push(new Data(this.id, this.title, this.url));
+            // this.dataService.addData(this.id, this.title, this.url).subscribe(data => console.log(data));
+            this.id++;
+        }
     }
 
     check(event: any) {
