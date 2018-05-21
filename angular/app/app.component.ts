@@ -29,7 +29,7 @@ export class AppComponent {
     pic1: string = 'app/img/Oaki.JPG';
     pic2: string = 'https://imagesvc.timeincapp.com/v3/mm/image?url=https%3A%2F%2Fcdn-image.foodandwine.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F4_3_horizontal_inbody_900x506%2Fpublic%2F1502824044%2Froyal-farms-best-gas-station-food-FT-SS0817.jpg%3Fitok%3Dig79fdSU&w=700&q=85';
     size: number = 500;
-    percent: number = 50;
+    percent: number = 100;
 
     checked: boolean;
     title: string = '';

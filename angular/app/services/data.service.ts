@@ -30,6 +30,12 @@ export class DataService {
     getData(): Observable<any[]> {
         return this.http
             .get(DB_URL)
-            .map(response => response.json().data);        
+            .map(response => response.json());        
+    }
+
+    addData() {
+        // return this.http
+        //     .put(`${DB_URL}/, )
+        //     .map
     }
 }
