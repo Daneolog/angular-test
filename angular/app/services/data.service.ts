@@ -40,9 +40,9 @@ export class DataService {
             .map(response => response.json());        
     }
 
-    // addData(id, title, url) {
-    //     return this.http
-    //         .put(`${DB_URL}/${id}`, new Data(id, title, url))
-    //         .map(response => response.json());
-    // }
+    addData(id, title, url): Observable<any[]> {
+        return this.http
+            .post(`${DB_URL}`, new Data(id, title, url))
+            .map(response => response.json());        
+    }
 }

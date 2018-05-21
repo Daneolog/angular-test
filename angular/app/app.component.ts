@@ -48,7 +48,7 @@ export class AppComponent {
         this.item++;
     }
 
-    click2(index: any) {
+    edit(index: any) {
         console.log(index);
 
         if (this.title != '' && this.url != '') {
@@ -61,10 +61,13 @@ export class AppComponent {
     
     submit(event: any) {
         if (this.title != '' && this.url != '') {
-            this.data.push(new Data(this.id, this.title, this.url));
-            // this.dataService.addData(this.id, this.title, this.url).subscribe(data => console.log(data));
-            this.id++;
+            this.dataService
+                .addData(this.id, this.title, this.url)
+                .subscribe(data => console.log(data));
+            this.dataService.getData().subscribe(data => this.data = data);
         }
+
+        this.id++;
     }
 
     check(event: any) {
