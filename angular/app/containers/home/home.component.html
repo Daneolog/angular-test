@@ -1,0 +1,39 @@
+<div [ngStyle]="style2">
+    <div class="app" id="something">
+        <a [href]="url">this is a link</a>
+
+        <!-- dotted line -->
+        <div style="border-bottom: 1px dotted black; margin: 10px"></div>
+
+        <input type="range" min="0" max="200" style="width: 500px" [(ngModel)]="percent"><br>
+        <img [src]="pic1" [width] = "size" [ngStyle]="{'filter' : 'brightness(' + percent + '%)'}"><br>
+        <textfield text = "Name" [fname] = "fname" [lname] = "lname"> </textfield>
+
+        <!-- dotted line -->
+        <div style="border-bottom: 1px dotted black; margin: 10px"></div>
+        
+        this is a 
+        <textbutton text="text" buttonText="button" (clicked)="click1()"></textbutton>
+        <p [hidden]="!checked">{{now | date: 'MM/dd/yyyy hh:mm:ss'}}</p>
+        <br [hidden]="checked">
+
+        <checktext (clicked)="check($event)">this is a checktext</checktext>
+        <p>{{item}}</p>
+
+        <!-- dotted line -->
+        <div style="border-bottom: 1px dotted black; margin: 10px"></div>
+
+        <p>{{title}} and {{url}}</p>
+        <!-- <textfield text="attribute" fname="text" lname="url" [(ftext)]="title" [(ltext)]="url"></textfield> -->
+        title: <input type="text" placeholder="numero uno" [(ngModel)]="title"><br>
+        url: <input type="text" placeholder="http://google.com" [(ngModel)]="url"><br>
+
+        <button type="submit" (click)="submit()">submit</button>
+        <input type="button" value="submit" (click)="submit()">
+
+        <mylist [data]="data" (clicked)="edit($event)">this is a list</mylist>
+
+        <!-- dotted line -->
+        <div style="border-bottom: 1px dotted black; margin: 10px"></div>
+    </div>
+</div>

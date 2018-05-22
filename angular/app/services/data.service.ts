@@ -31,18 +31,18 @@ export class DataService {
     getData(): Observable<any[]> {
         return this.http
             .get(DB_URL)
-            .map(response => response.json());        
+            .map(response => response.json());
     }
 
     setData(id, title, url): Observable<any[]> {
         return this.http
             .put(`${DB_URL}/${id}`, new Data(id, title, url))
-            .map(response => response.json());        
+            .map(response => response.json());
     }
 
     addData(id, title, url): Observable<any[]> {
         return this.http
             .post(`${DB_URL}`, new Data(id, title, url))
-            .map(response => response.json());        
+            .map(response => response.json());
     }
 }
